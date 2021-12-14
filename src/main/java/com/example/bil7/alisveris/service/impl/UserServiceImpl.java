@@ -12,12 +12,11 @@ import org.springframework.stereotype.Service;
 @RequiredArgsConstructor(onConstructor = @__(@Autowired))
 public class UserServiceImpl implements UserService  {
 
-
     private final UserRepo repo;
 
     @Override
-    public User findUser(String mail, String password) {
-        return repo.findByUserNameAndPassword(mail, password);
+    public User findUser(String userName, String password) {
+        return repo.findByUserNameAndPassword(userName, password);
     }
 
     @Override
